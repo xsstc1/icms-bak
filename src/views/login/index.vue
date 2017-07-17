@@ -103,6 +103,7 @@
     height 300px
     background-size 100%
     background-attachment fixed
+    background-repeat no-repeat
   .login-form
     width 350px
     margin -200px auto 0 auto

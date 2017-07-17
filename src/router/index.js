@@ -49,11 +49,40 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
+    path: '',
+    component: Layout,
+    redirect: '/table/index',
+    name: '平台首页',
+    icon: 'iconfont icon-shouye',
+    noDropdown: true,
+    children: [{ path: 'dashboard',name: '平台首页' }]
+  },
+  {
     path: '/example',
     component: Layout,
     redirect: 'noredirect',
-    name: 'Example',
-    icon: 'zujian',
+    name: '资讯管理',
+    icon: 'iconfont icon-zixun1',
+    children: [
+      { path: 'index', component: Form, name: 'Form', icon: 'zonghe' }
+    ]
+  },
+  {
+    path: '/example',
+    component: Layout,
+    redirect: 'noredirect',
+    name: '短信管理',
+    icon: 'iconfont icon-shortmessage',
+    children: [
+      { path: 'index', component: Form, name: 'Form', icon: 'zonghe' }
+    ]
+  },
+  {
+    path: '/example',
+    component: Layout,
+    redirect: 'noredirect',
+    name: '权限管理管理',
+    icon: 'iconfont icon-shezhitianchong',
     children: [
       { path: 'index', component: Form, name: 'Form', icon: 'zonghe' }
     ]
@@ -65,6 +94,7 @@ export const asyncRouterMap = [
     redirect: '/table/index',
     name: 'Table',
     icon: 'tubiaoleixingzhengchang',
+    hidden:true,
     noDropdown: true,
     children: [{ path: 'index', component: Table, name: 'Table', meta: { role: ['admin'] } }]
   },

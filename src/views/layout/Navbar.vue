@@ -1,8 +1,8 @@
 <template>
     <el-menu class="navbar" mode="horizontal">
         <hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
-        <levelbar></levelbar>
-        <el-dropdown class="avatar-container" trigger="click">
+        <!-- <levelbar></levelbar> -->
+        <!-- <el-dropdown class="avatar-container" trigger="click">
             <div class="avatar-wrapper">
                 <img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">
                 <i class="el-icon-caret-bottom"></i>
@@ -15,7 +15,19 @@
                 </router-link>
                 <el-dropdown-item divided><span @click="logout" style="display:block;">退出登录</span></el-dropdown-item>
             </el-dropdown-menu>
-        </el-dropdown>
+        </el-dropdown> -->
+        <div class="fl">
+          <i class="iconfont icon-logo color-hui f50 fl mr-5"></i>
+          <span class="f17 color-hui fl">中诚管理业务支撑平台</span>
+        </div>
+        <div class="fr mr-30">
+          <span class="mr-10 f13 color-hui">欢迎您：朱纪福</span>
+          <span class="f13 color-hui mr-50">【部门】BIM信息研究部</span>
+          <el-button class="f13 color-hui" type="text"><i class="iconfont icon-daiban mr-5"></i>代办</el-button>
+          <el-button class="f13 color-hui" type="text"><i class="iconfont icon-mima mr-5"></i>密码</el-button>
+          <el-button class="f13 color-hui" type="text" @click="logout"><i class="iconfont icon-tuichu mr-5"></i>退出</el-button>
+        </div>
+
     </el-menu>
 </template>
 
@@ -50,12 +62,17 @@
 
 <style rel="stylesheet/scss" lang="scss" scoped>
     .navbar {
-        height: 50px;
-        line-height: 50px;
+        height: 65px;
+        line-height: 65px;
         border-radius: 0px !important;
+        background-color: #324157;
+        z-index: 99999999;
+        position: fixed;
+        width: 100%;
+
         .hamburger-container {
-            line-height: 58px;
-            height: 50px;
+            line-height: 80px;
+            height: 70px;
             float: left;
             padding: 0 10px;
         }
@@ -94,6 +111,3 @@
         }
     }
 </style>
-
-
-

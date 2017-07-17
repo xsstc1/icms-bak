@@ -16,3 +16,7 @@
       }
     }
 </script>
+<style lang="stylus" scoped>
+.app-main
+  padding-top 65px
+</style>
