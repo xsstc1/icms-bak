@@ -17,7 +17,7 @@
         <el-input class="login-name-icon pr" name="email" type="text" v-model="loginForm.email" autoComplete="on" placeholder="请输入用户名"></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <span class="svg-container f13">
+        <span class="color-8 f13">
                   密码：
                 </span>
         <el-input class="login-password-icon pr" name="password" type="password" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on"
@@ -33,7 +33,7 @@
       </div>
       </div>
     </el-form>
-    <footer class="login-footer tc f12 color-8 w bg-color-white">Copyright     2017  中诚工程建设管理（苏州）股份有限公司  版权所有</footer>
+    <footer class="login-footer tc f12 color-8 w bg-color-white hidden-xs">Copyright     2017  中诚工程建设管理（苏州）股份有限公司  版权所有</footer>
   </div>
 </template>
 
@@ -96,7 +96,6 @@
 </script>
 
 <style lang="stylus">
-@import "../../assets/css/style.styl"
 .login-container
   .login-bg
     background:url("../../assets/img/login_bg.jpg")
@@ -141,6 +140,17 @@
     position fixed
   .el-form-item__error
     padding-top 7px
+
+@media screen and (max-width: 768px)
+  .login-container
+    .login-form
+      width 90%
+      margin-top 0px
+      padding-top 20px
+      .shadow
+        margin-bottom 40px
+    .login-bg
+      height 70px
 
 
 </style>

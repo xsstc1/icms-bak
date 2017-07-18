@@ -9,6 +9,6 @@ export default {
   name: 'app'
 }
 </script>
-<style lang="scss">
+<style lang="stylus">
   @import './styles/index.styl'; // 全局自定义的css样式
 </style>

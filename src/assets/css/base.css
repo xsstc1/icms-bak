@@ -1,7 +1,7 @@
-/*@font-face {
+@font-face {
   font-family: "numfont";
   src: url('http://ohaj3dh57.bkt.clouddn.com/DINCOND-LIGHT.otf');
-}*/
+}
 /*@font-face {
   font-family: 'iconfont';
   src: url('//at.alicdn.com/t/font_yna6cshazx1xajor.eot');
@@ -17,6 +17,12 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
   }*/
+  .text-short{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+.beauty-num{font-family: "numfont"!important}
 .bn{border: none}
 .grayscale{
   filter: grayscale(100%);
@@ -416,10 +422,12 @@
 	padding: 10px
 }
 .p20{padding: 20px;}
+.p25{padding:25px;}
 .p30{padding: 30px;}
 .p15 {
 	padding: 15px;
 }
+.p0-10{padding:0 10px}
 .p5-10{padding: 5px 10px;}
 .p10-40 {
 	padding: 10px 40px
@@ -824,6 +832,9 @@
 
 .radius5 {
 	border-radius: 5px
+}
+.radius3 {
+	border-radius: 3px
 }
 
 .cp {

@@ -10,7 +10,7 @@ import Layout from '../views/layout/Layout';
 const Login = _import('login/index');
 
 /* dashboard */
-const dashboard = _import('dashboard/index');
+const home = _import('home/index');
 
 /* error page */
 const Err404 = _import('404');
@@ -34,10 +34,10 @@ export const constantRouterMap = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/home',
     name: 'Home',
     hidden: true,
-    children: [{ path: 'dashboard', component: dashboard }]
+    children: [{ path: 'home', component: home }]
   }
 ]
 
@@ -55,7 +55,7 @@ export const asyncRouterMap = [
     name: '平台首页',
     icon: 'iconfont icon-shouye',
     noDropdown: true,
-    children: [{ path: 'dashboard',name: '平台首页' }]
+    children: [{ path: 'home',name: '平台首页' }]
   },
   {
     path: '/example',
