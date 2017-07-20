@@ -15,9 +15,12 @@ const home = _import('home/index');
 /* error page */
 const Err404 = _import('404');
 
-/* demo page */
+/* pages */
 const Form = _import('page/form');
 const Table = _import('table/index');
+/* waitPages */
+const waitList = _import('wait/index');
+const waitDetails = _import('wait/waitDetails')
 
 Vue.use(Router);
 
@@ -97,6 +100,20 @@ export const asyncRouterMap = [
     hidden:true,
     noDropdown: true,
     children: [{ path: 'index', component: Table, name: 'Table', meta: { role: ['admin'] } }]
+  },
+  {
+    path: '/waitList',  //代办页
+    component: Layout,
+    redirect: '/wait/index',
+    hidden:true,
+    children: [{ path: '', component: waitList}]
+  },
+  {
+    path: '/waitDetails',  //代办详情
+    component: Layout,
+    redirect: '/wait/waitDetails',
+    hidden:true,
+    children: [{ path: '', component: waitDetails}]
   },
 
   { path: '*', redirect: '/404', hidden: true }

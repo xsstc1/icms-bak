@@ -23,7 +23,7 @@
         <div class="fr mr-30 hidden-xs">
           <span class="mr-10 f13 color-hui">欢迎您：朱纪福</span>
           <span class="f13 color-hui mr-50">【部门】BIM信息研究部</span>
-          <el-button class="f13 color-hui" type="text"><i class="iconfont icon-daiban mr-5"></i>代办</el-button>
+          <el-button class="f13 color-hui" type="text"><router-link class='inlineBlock' to="/waitList"><i class="iconfont icon-daiban mr-5"></i>代办</router-link></el-button>
           <el-button class="f13 color-hui" type="text"><i class="iconfont icon-mima mr-5"></i>密码</el-button>
           <el-button class="f13 color-hui" type="text" @click="logout"><i class="iconfont icon-tuichu mr-5"></i>退出</el-button>
         </div>

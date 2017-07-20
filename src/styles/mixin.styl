@@ -27,8 +27,16 @@
 
 // 自适应模块
 @media screen and (max-width: 768px)
-      .hidden-xs
-          display none
+  .hidden-xs
+    display none
+  .icms-dialog
+    width 95%
 @media screen and (min-width: 769px)
-      .visible-xs
-          display show
+  .visible-xs
+      display show
+@media screen and (min-width: 769px) and (max-width: 1199px)
+  .icms-dialog
+    width 80%
+@media screen and (min-width: 1200px) and (max-width: 1599px)
+  .icms-dialog
+    width 65%
