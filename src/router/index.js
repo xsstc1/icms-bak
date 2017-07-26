@@ -29,6 +29,21 @@ const systemSetting = _import('systemSetting/index');
 const messageSend = _import('messageSetting/messageSend');
 const messageQuery = _import('messageSetting/messageQuery');
 
+/*role page*/
+const departmentAdmin = _import('rolesSetting/department');
+const roleAdmin = _import('rolesSetting/roles');
+const userAdmin = _import('rolesSetting/users');
+
+/* info page */
+const noticeEdit = _import('infoSetting/notice');
+const forumEdit = _import('infoSetting/forum');
+const statuteEdit = _import('infoSetting/statute');
+const insideEdit = _import('infoSetting/inside');
+const priceEdit = _import('infoSetting/price');
+const honorEdit = _import('infoSetting/honor');
+const achievementEdit = _import('infoSetting/achievement');
+const cultureEdit = _import('infoSetting/culture');
+
 Vue.use(Router);
 
 /**
@@ -81,16 +96,61 @@ export const asyncRouterMap = [{
       name: '平台首页'
     }]
   },
+
+  // const noticeEdit = _import('infoSetting/notice');
+  // const forumEdit = _import('infoSetting/forum');
+  // const statuteEdit = _import('infoSetting/statute');
+  // const insideEdit = _import('infoSetting/inside');
+  // const priceEdit = _import('infoSetting/price');
+  // const honorEdit = _import('infoSetting/honor');
+  // const achievementEdit = _import('infoSetting/achievement');
+  // const cultureEdit = _import('infoSetting/culture');
+
   {
-    path: '/example',
+    path: '/infoSetting',
     component: Layout,
     redirect: 'noredirect',
     name: '资讯管理',
     icon: 'iconfont icon-zixun1',
     children: [{
-      path: 'index',
-      component: Form,
-      name: 'Form',
+      path: 'noticeEdit',
+      component: noticeEdit,
+      name: '公告栏',
+      icon: 'zonghe'
+    },{
+      path: 'forumEdit',
+      component: forumEdit,
+      name: '论坛',
+      icon: 'zonghe'
+    },{
+      path: 'statuteEdit',
+      component: statuteEdit,
+      name: '法规制度',
+      icon: 'zonghe'
+    },{
+      path: 'insideEdit',
+      component: insideEdit,
+      name: '内部材料',
+      icon: 'zonghe'
+    },{
+      path: 'priceEdit',
+      component: priceEdit,
+      name: '材料价格',
+      icon: 'zonghe'
+    },{
+      path: 'honorEdit',
+      component: honorEdit,
+      name: '材料价格',
+      icon: 'zonghe'
+    },{
+      path: 'achievementEdit',
+      component: achievementEdit,
+      name: '企业经营与业绩',
+      icon: 'zonghe'
+    },{
+      path: 'cultureEdit',
+      component: cultureEdit,
+      name: '企业文化',
       icon: 'zonghe'
     }]
   },
@@ -113,18 +173,25 @@ export const asyncRouterMap = [{
     }]
   },
   {
-    path: '/example',
+    path: '/roleSetting',
     component: Layout,
     redirect: 'noredirect',
     name: '权限管理',
     icon: 'iconfont icon-shezhitianchong',
-    noDropdown: true,
-    hidden: true,
     children: [{
-      path: 'index',
-      component: Form,
-      name: 'Form',
+      path: 'departmentAdmin',
+      component: departmentAdmin,
+      name: '部门管理',
       icon: 'zonghe'
+    },{
+      path: 'roleAdmin',
+      component: roleAdmin,
+      name: '角色管理',
+      icon: 'zonghe'
+    },{
+      path: 'userAdmin',
+      component: userAdmin,
+      name: '用户管理',
     }]
   },
   {
@@ -134,6 +201,7 @@ export const asyncRouterMap = [{
     name: '系统管理',
     icon: 'iconfont icon-shezhitianchong',
     noDropdown: true,
+    hidden:true,
     children: [{
       path: 'index',
       component: systemSetting,

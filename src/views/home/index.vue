@@ -72,7 +72,7 @@
   <article class="p10">
     <el-row :gutter="20">
       <el-col :span="14" :xs="24" class="mt-25">
-        <div class="grid-content home-list-wait bg-color-white oh radius5">
+        <div class="grid-content home-list-wait bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>代办事项
@@ -186,7 +186,7 @@
         </div>
       </el-col>
       <el-col :span="10" :xs="24" class="mt-25">
-        <div class="grid-content home-list-price bg-color-white oh radius5">
+        <div class="grid-content home-list-price bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>价格材料
@@ -279,7 +279,7 @@
         </div>
       </el-col>
       <el-col :span="14" :xs="24" class="mt-25">
-        <div class="grid-content home-list-notice bg-color-white oh radius5">
+        <div class="grid-content home-list-notice bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>公告栏
@@ -361,7 +361,7 @@
         </div>
       </el-col>
       <el-col :span="10" :xs="24" class="mt-25">
-        <div class="grid-content home-list-rule bg-color-white oh radius5">
+        <div class="grid-content home-list-rule bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>法规制度
@@ -407,7 +407,7 @@
         </div>
       </el-col>
       <el-col :span="14" :xs="24" class="mt-25">
-        <div class="grid-content home-list-info bg-color-white oh radius5">
+        <div class="grid-content home-list-info bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>内部资料
@@ -500,7 +500,7 @@
         </div>
       </el-col>
       <el-col :span="10" :xs="24" class="mt-25">
-        <div class="grid-content home-list-company bg-color-white oh radius5">
+        <div class="grid-content home-list-company bg-color-white oh radius5 shadow">
           <nav class="color-m6 f14 cb bbs-1 p15">
             <div class="fl">
               <i class="iconfont icon-daiban mr-5"></i>法规制度

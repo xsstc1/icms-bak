@@ -92,12 +92,15 @@
 
 <style lang="stylus">
 #wait-content
+  .el-tabs__content
+    overflow inherit
   .el-tabs__header
     padding 15px
     border none
     background-color #fff
     border-radius 5px
     font-weight 600
+    box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)
     .el-tabs__nav
       border 1px solid #324157
       border-radius 5px
@@ -111,13 +114,11 @@
         border-right 1px solid #324157
     .el-tabs__item.is-active
       border 1px solid transparent
-      background-color #324157
+      background-color #37c3d2
       border-radius 0
       color #fff
   a
     transition all .3s
-  .el-table__footer-wrapper thead div, .el-table__header-wrapper thead div,.el-table th
-    background-color #f5f5f5
   .el-table__body tr.current-row>td,.el-table--enable-row-hover .el-table__body tr:hover>td
     background-color #f1f1f1
     a

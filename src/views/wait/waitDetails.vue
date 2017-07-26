@@ -82,7 +82,7 @@
       <el-table-column align="center" label='资料收到日期' width="110" prop="time"></el-table-column>
       <el-table-column align="center" label='提交归档时间' width="110" prop="time"></el-table-column>
       <el-table-column align="center" label='工作项目类型' width="110" prop="time"></el-table-column>
-      <el-table-column align="center" label='施工合同金额（元）' width="120" prop="time"></el-table-column>
+      <el-table-column align="center" label='施工合同金额（元）' width="130" prop="time"></el-table-column>
       <el-table-column align="center" label='送审价' width="90" prop="time"></el-table-column>
       <el-table-column align="center" label='流程状态' width="90" prop="time"></el-table-column>
       <el-table-column align="center" label="操作管理" fixed="right" width="200">
@@ -569,22 +569,22 @@ export default {
       }],
       tableData: [{
         num: 1,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '待归档：苏州苏绣小',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 2,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '待归档：苏州苏绣小',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 3,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '待归档：苏州苏绣小',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 4,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '待归档：苏州苏绣小',
         time: '2017-05-08',
         person: '郑东'
       }]
@@ -652,8 +652,8 @@ export default {
     .wait-header-out
       background-color #3b9fda
       border-color #3b9fda
-  .el-table .cell, .el-table th>div
-    padding 0
+  .el-table th>.cell
+    line-height 15px
   .el-table th
     text-align center
   .el-table-column--selection

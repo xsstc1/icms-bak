@@ -1,57 +1,53 @@
 <template>
 <div id="systemSetting-content" class="app-container">
-  <header class="p20 bg-color-white">
-    <el-row :gutter="20">
-
-      <el-col :span="18">
+  <header class="p20 bg-color-white shadow radius5">
+      <div>
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
-          <el-form-item label="发送人:">
+          <el-form-item label="发送人:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
-          <el-form-item label="收信人:">
+          <el-form-item label="收信人:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
-          <el-form-item label="收信人号码:">
+          <el-form-item label="收信人号码:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
-          <el-form-item label="短信内容:">
+          <el-form-item label="短信内容:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
-          <el-form-item label="发送状态:">
+          <el-form-item label="发送状态:" class="mt-10">
             <el-select size="small" placeholder="请选择">
 
             </el-select>
 
           </el-form-item>
         </el-form>
-      </el-col>
-      <el-col :span="6">
+      </div>
+      <div class="mt-25 mb-15 tc">
         <el-button type="primary" class="btn-orange">查询</el-button>
         <el-button type="primary" class="btn-red">重置</el-button>
-      </el-col>
-    </el-row>
+      </div>
   </header>
   <article class="mt-30">
     <el-table :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
       <el-table-column align="center" label='序号' width="95" prop="num"></el-table-column>
-      <el-table-column label="收信人">
+      <el-table-column label="收信人" width="120">
+
+      </el-table-column>
+
+      <el-table-column label="收信人（号码）" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="短信内容" align="center" prop="time">
         <template scope="scope">
             <router-link class='inlineBlock' to="/waitDetails">
             {{scope.row.waitThing}}
             </router-link>
         </template>
       </el-table-column>
-      <el-table-column label="发布日期" width="120" align="center" prop="time"></el-table-column>
-      <el-table-column align="center" prop="person" label="发布人" width="120"></el-table-column>
-      <el-table-column align="center" prop="person" label="状态" width="80"></el-table-column>
-      <el-table-column align="center" label="操作管理" width="180">
-        <template scope="scope">
-        <el-button class="color-orange" type="text" size="small">查看</el-button>
-        <el-button @click="systemStop" class="color-orange" type="text" size="small">停用</el-button>
-          <el-button class="color-orange" type="text" size="small">修改</el-button>
-          <el-button @click="systemDel" class="color-orange" type="text" size="small">删除</el-button>
-      </template>
-      </el-table-column>
+      <el-table-column label="发送人" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="发送人（号码）" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="发送日期" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="定时发送日期" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column align="center" prop="person" label="发送状态" width="80"></el-table-column>
     </el-table>
   </article>
 

@@ -65,7 +65,7 @@
   border 1px solid #324157
 
 .el-table__footer-wrapper thead div, .el-table__header-wrapper thead div,.el-table th,.el-table__fixed-header-wrapper thead div
-  background-color #f5f5f5
+  background-color #fff
 .el-table__body tr.current-row>td,.el-table--enable-row-hover .el-table__body tr:hover>td
   background-color #f1f1f1
 .icms-dialog
@@ -91,29 +91,88 @@
   border 1px solid #798da5
 .el-input--mini .el-input__inner
   height 25px
+.el-input__inner,.el-input--small .el-input__inner
+  height 32px
 .icms-dialog
   border-radius 5px
   overflow hidden
 .el-table th>.cell
-  padding 0
+  padding 5px 5px 15px 5px
 .btn-orange
   background-color #ff885a
   border 1px solid #ff885a
-  padding 8px 25px
+  padding 8px 20px
 .btn-red
   background-color #ff7373
   border 1px solid #ff7373
-  padding 8px 25px
+  padding 8px 20px
 .btn-blue
   background-color #32aab7
   border 1px solid #32aab7
-  padding 8px 25px
+  padding 8px 20px
 .btn-green
-  background-color #65bb24
-  border 1px solid #65bb24
-  padding 8px 25px
+  background-color #32aab7
+  border 1px solid #32aab7
+  padding 8px 20px
 .btn-white
-  padding 8px 25px
+  padding 8px 20px
 .el-checkbox__input.is-indeterminate .el-checkbox__inner
   background-color #485b7b
   border-color #485b7b
+.el-pagination
+  .btn-prev
+    border-radius 20px!important
+    padding 5px 10px
+    margin 0 5px
+    border 1px solid #ccc
+    .el-icon-arrow-left:before
+      content "上一页"
+      color #666
+  .btn-next
+    border-radius 20px!important
+    padding 5px 10px
+    margin 0 5px
+    border 1px solid #ccc
+    .el-icon-arrow-right:before
+      content "下一页"
+      color #666
+.el-pager li
+  border none
+  border-radius 50%
+  margin 0 5px
+  border 1px solid #ccc
+.el-pager li:last-child
+  border none
+  border 1px solid #ccc
+.el-input--mini .el-input__inner
+  height 30px
+.el-table .cell, .el-table th>div
+  padding 10px 5px
+.el-table
+  padding 15px 0
+  border none
+  border-radius 5px
+  box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)
+  thead
+    border-bottom 1px solid #e6e6e6
+  td,th.is-leaf
+    border-bottom none
+  .el-table__body-wrapper
+    padding-top 10px
+.el-picker-panel
+  border-radius 4px
+  box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)
+.dropzone
+  border-radius 4px
+  border 1px solid #798da5
+  .dz-preview
+    .dz-error-message
+      top 120px!important
+      left 80px!important
+    .dz-details
+      border-radius 4px
+.el-table__fixed-right
+  .el-table__fixed-header-wrapper
+    padding-top 15px
+  .el-table__fixed-body-wrapper
+    padding-top 25px

@@ -11,11 +11,13 @@ import 'normalize.css/normalize.css'
 import './assets/css/base.css'
 import '@/assets/iconfont/iconfont'
 import IconSvg from '@/components/Icon-svg/index.vue'
+import VueQuillEditor from 'vue-quill-editor'
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);
-Vue.component('icon-svg', IconSvg)
+Vue.component('icon-svg', IconSvg);
+Vue.use(VueQuillEditor);
 
 const whiteList = ['/login'];
 router.beforeEach((to, from, next) => {

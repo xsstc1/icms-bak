@@ -202,7 +202,7 @@
 }
 
 .w {
-	width: 100%
+	width: 100%!important
 }
 
 .w70 {
@@ -232,6 +232,7 @@
 .w60 {
 	width: 60%
 }
+.w75{width: 75%}
 .w90{width: 90%;}
 
 .wp40 {
@@ -394,7 +395,7 @@
 .pt-30 {
 	padding-top: 30px
 }
-
+.pt-40{padding-top: 40px}
 .pt-50 {
 	padding-top: 50px
 }
@@ -773,7 +774,7 @@
 }
 
 .color-green {
-	color: #71dac4
+	color: #71dac4!important
 }
 
 .color-success {
