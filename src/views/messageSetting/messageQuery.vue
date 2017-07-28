@@ -2,7 +2,7 @@
 <div id="systemSetting-content" class="app-container">
   <header class="p20 bg-color-white shadow radius5">
       <div>
-        <el-form :inline="true" :model="formInline" class="demo-form-inline">
+        <el-form :inline="true" :model="formInline" class="demo-form-inline" :label-position="right" label-width="90px">
           <el-form-item label="发送人:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
@@ -23,9 +23,9 @@
           </el-form-item>
         </el-form>
       </div>
-      <div class="mt-25 mb-15 tc">
-        <el-button type="primary" class="btn-orange">查询</el-button>
-        <el-button type="primary" class="btn-red">重置</el-button>
+      <div class="mt-30 mb-15 tc">
+        <el-button type="primary" class="btn-orange shadow"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查 询</el-button>
+        <el-button type="primary" class="btn-red shadow"><i class="iconfont icon-1 f13 mr-5"></i>重 置</el-button>
       </div>
   </header>
   <article class="mt-30">

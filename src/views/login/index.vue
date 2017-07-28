@@ -25,7 +25,7 @@
       </el-form-item>
       <el-form-item class="mt-50">
         <el-button class="bg-color-main bn login-btn" type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">
-          登录
+          登 录
         </el-button>
       </el-form-item>
       <div class="mt-20 tc mb-10 f13">

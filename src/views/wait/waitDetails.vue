@@ -1,7 +1,7 @@
 <template>
 <div id="wait-details" class="app-container">
   <header class="p25 bg-color-white pr shadow radius5">
-    <el-form :inline="true" :model="formInline" class="demo-form-inline">
+    <el-form :inline="true" :model="formInline" class="demo-form-inline" :label-position="right" label-width="90px">
       <el-form-item label="项目名称:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写项目名称"></el-input>
       </el-form-item>
@@ -11,10 +11,10 @@
       <el-form-item label="报告编号:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写报告编号"></el-input>
       </el-form-item>
-      <br>
       <el-form-item label="项目负责人:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写项目名称"></el-input>
       </el-form-item>
+      <br>
       <el-form-item label="归档日期:">
         <el-date-picker size="small" type="date" placeholder="选择日期">
         </el-date-picker>
@@ -25,7 +25,19 @@
       <el-form-item label="建设单位:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写建设单位"></el-input>
       </el-form-item>
-      <div class="wait-detail-category">
+      <el-form-item label="项目类别:">
+        <el-select placeholder="请选择项目类别">
+          <el-option label="区域一" value="shanghai"></el-option>
+          <el-option label="区域二" value="beijing"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="流程状态:">
+        <el-select placeholder="请选择流程状态">
+          <el-option label="区域一" value="shanghai"></el-option>
+          <el-option label="区域二" value="beijing"></el-option>
+        </el-select>
+      </el-form-item>
+      <div class="wait-detail-category" v-if="false">
         <el-form-item label="项目类别:">
           <span class="mr-10 active">标底编制</span>
           <span class="mr-10">标底编制（全过程）</span>
@@ -38,7 +50,7 @@
           <span class="mr-10">全过程</span>
         </el-form-item>
       </div>
-      <div class="wait-detail-status">
+      <div class="wait-detail-status" v-if="false">
         <el-form-item label="项目状态:">
           <span class="mr-10 active">全部</span>
           <span class="mr-10">进行中</span>
@@ -54,20 +66,20 @@
         </el-form-item>
       </div>
     </el-form>
-    <div class="wait-details-slide disinblock f12 pa tc">
+    <!-- <div class="wait-details-slide disinblock f12 pa tc">
       <span class="disinblock cp shadow">点击收起<i class="iconfont icon-triangle-down-copy f12 ml-5"></i></span>
-    </div>
-    <div class="tr wait-header-btn f13">
-      <el-button size="small" class="wait-header-search" type="primary">查询</el-button>
-      <el-button size="small" class="wait-header-new" type="primary" @click="creatNew = true"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新建</el-button>
-      <el-button size="small" class="wait-header-in" type="primary"><i class="iconfont icon-tianjiawenjianjia f12 mr-5"></i>导入文件</el-button>
-      <el-button size="small" class="wait-header-out" type="primary"><i class="iconfont icon-excel f12 mr-5"></i>导出Excel</el-button>
+    </div> -->
+    <div class="tc wait-header-btn f13 mb-10">
+      <el-button class="btn-red shadow mr-50 mt-20" type="primary"><i class="iconfont icon-shiliangzhinengduixiang f12 mr-5"></i>查询</el-button>
+      <el-button class="btn-blue shadow mt-20" type="primary" @click="creatNew = true"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新建</el-button>
+      <el-button class="btn-orange shadow mt-20" type="primary"><i class="iconfont icon-tianjiawenjianjia f12 mr-5"></i>导入文件</el-button>
+      <el-button class="btn-green shadow mt-20" type="primary"><i class="iconfont icon-excel f12 mr-5"></i>导出Excel</el-button>
     </div>
   </header>
   <article class="mt-70">
     <el-table class="f13" ref="multipleTable" :data="tableData" v-loading.body="listLoading" fit highlight-current-row>
-      <el-table-column type="selection" width="40"></el-table-column>
-      <el-table-column align="center" label='序号' width="60" prop="num"></el-table-column>
+      <el-table-column type="selection" width="60"></el-table-column>
+      <el-table-column align="center" label='序号' width="50" prop="num"></el-table-column>
       <el-table-column label="项目名称" width="170">
         <template scope="scope">
         <router-link class='inlineBlock' to="/">
@@ -538,9 +550,9 @@
         </el-table>
       </div>
       <div slot="footer" class="dialog-footer tc mt-35">
-        <el-button class="wait-details-new-save" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="wait-details-new-cancel" @click="dialogVisible = false">取 消</el-button>
-  </div>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="dialogVisible = false">取 消</el-button>
+      </div>
     </div>
   </el-dialog>
 </div>
@@ -608,7 +620,7 @@ export default {
 <style lang="stylus">
 #wait-details
   .el-form-item
-    margin-bottom 10px
+    margin-bottom 15px
   .wait-detail-status
     margin-top -15px
   .wait-detail-category,.wait-detail-status
@@ -635,11 +647,6 @@ export default {
       i
         color #ff885a
   .wait-header-btn
-    button
-      padding 8px 15px
-      margin 15px 10px
-      &:hover
-        opacity 0.7
     .wait-header-search
       background-color #ff7373
       border-color #ff7373
@@ -654,8 +661,18 @@ export default {
       border-color #3b9fda
   .el-table th>.cell
     line-height 15px
-  .el-table th
-    text-align center
+  .el-table
+    th
+      text-align center
+    .cell
+      button
+        color #20a0ff
+        // &:nth-child(2)
+        //   color #45d6ca
+        // &:nth-child(3)
+        //   color #a767ea
+        // &:nth-child(4)
+        //   color #f17474
   .el-table-column--selection
     div
       text-align center
@@ -664,4 +681,11 @@ export default {
     border 1px solid #ff885a
   .wait-details-new-save,.wait-details-new-cancel
     padding 8px 25px
+  .el-table__fixed-body-wrapper
+    padding-top 25px
+  .el-date-editor.el-input,.el-select
+    width 190px
+  .icms-dialog-content
+    .el-date-editor.el-input,.el-select
+      width 100%
 </style>

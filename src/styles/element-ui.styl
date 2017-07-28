@@ -4,7 +4,8 @@
     display none !important
 
 
-
+.el-select
+  width 190px
 .el-upload__input
   display none
 
@@ -48,6 +49,7 @@
   left 0
 .el-button
   transition all .5s
+  border-radius 50px
 .el-checkbox__input.is-checked .el-checkbox__inner
   background-color #485b7b
   border-color #485b7b
@@ -101,21 +103,39 @@
 .btn-orange
   background-color #ff885a
   border 1px solid #ff885a
-  padding 8px 20px
+  padding 9px 20px
+  &:hover,&:focus
+    opacity 0.7
+    background-color #ff885a
+    border 1px solid #ff885a
 .btn-red
   background-color #ff7373
   border 1px solid #ff7373
-  padding 8px 20px
+  padding 9px 20px
+  &:hover,&:focus
+    opacity 0.7
+    background-color #ff7373
+    border 1px solid #ff7373
 .btn-blue
   background-color #32aab7
   border 1px solid #32aab7
-  padding 8px 20px
+  padding 9px 20px
+  &:hover,&:focus
+    opacity 0.7
+    background-color #32aab7
+    border 1px solid #32aab7
 .btn-green
-  background-color #32aab7
-  border 1px solid #32aab7
-  padding 8px 20px
+  background-color #1acab1
+  border 1px solid #1acab1
+  padding 9px 20px
+  &:hover,&:focus
+    opacity 0.7
+    background-color #1acab1
+    border 1px solid #1acab1
 .btn-white
-  padding 8px 20px
+  padding 10px 20px
+  &:hover,&:focus
+    opacity 0.7
 .el-checkbox__input.is-indeterminate .el-checkbox__inner
   background-color #485b7b
   border-color #485b7b
@@ -175,4 +195,12 @@
   .el-table__fixed-header-wrapper
     padding-top 15px
   .el-table__fixed-body-wrapper
-    padding-top 25px
+    padding
+.roles-search
+  padding 9px
+  border 1px solid #dedede
+  border-right none
+  border-top-left-radius 50px
+  border-bottom-left-radius 50px
+  text-indent 1em
+  width 200px

@@ -586,7 +586,7 @@ export default {
       ul
         padding-bottom 8px
         li
-          padding 8px 15px
+          padding 10px 15px
           transition all .5s
           &:hover
             background-color #f1f1f1

@@ -1,13 +1,12 @@
 <template>
 <div id="article-content" class="app-container">
   <header class="p20 bg-color-white shadow radius5 tr">
-    <input class="roles-search f13" placeholder="请输入您想查找的文章标题" /><button type="primary" class="btn-orange roles-search-btn el-button color-white">搜索</button>
-    <el-button @click="addArticle" type="primary" class="btn-green"><i class="iconfont icon-iconfont707 f12 mr-5"></i>发布文章</el-button>
+    <input class="roles-search f13" placeholder="请输入您想查找的文章标题" /><button type="primary" class="btn-orange roles-search-btn el-button color-white shadow">搜索</button>
+    <el-button @click="addArticle" type="primary" class="btn-green shadow"><i class="iconfont icon-iconfont707 f12 mr-5"></i>发布文章</el-button>
   </header>
   <article class="mt-30">
     <el-table ref="multipleTable" :data="tableData" v-loading.body="listLoading" fit highlight-current-row>
       <el-table-column align="center" label='序号' width="95" prop="num"></el-table-column>
-
       <el-table-column label="标题" align="left" prop="waitThing"></el-table-column>
       <el-table-column label="时间" width="120" align="left" prop="time"></el-table-column>
       <el-table-column label="作者" width="120" align="center" prop="person"></el-table-column>
@@ -31,7 +30,7 @@
       <div class="add-department">
         <el-form label-width="100px">
           <el-form-item label="文章标题：">
-            <el-input></el-input>
+            <el-input placeholder="请输入文章标题"></el-input>
           </el-form-item>
           <el-form-item label="文章内容：">
             <div class="article-edit">
@@ -47,8 +46,8 @@
         </el-form>
       </div>
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
-        <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="setTimeDialog = false">清空</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false">清 空</el-button>
       </div>
     </div>
   </el-dialog>
@@ -175,17 +174,11 @@ export default {
 #article-content
   .add-department
     padding 10px 25px 10px 0
-  .roles-search
-    padding 7px
-    border 1px solid #ccc
-    border-right none
-    border-top-left-radius 4px
-    border-bottom-left-radius 4px
   .roles-search-btn
     border-top-left-radius 0
     border-bottom-left-radius 0
   .article-edit
-    line-height 1
+    line-height 1.5
     .ql-toolbar
       border-top-left-radius 4px
       border-top-right-radius 4px

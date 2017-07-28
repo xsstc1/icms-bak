@@ -1,8 +1,8 @@
 <template>
 <div id="department-content" class="app-container">
   <header class="p20 bg-color-white shadow radius5 tr">
-    <input class="roles-search f13" placeholder="请输入您想查找的角色名" /><button type="primary" class="btn-orange roles-search-btn el-button color-white">查询</button>
-    <el-button @click="addDepartment" type="primary" class="btn-green"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新增部门</el-button>
+    <input class="roles-search f13" placeholder="请输入您想查找的角色名" /><button type="primary" class="btn-orange shadow roles-search-btn el-button color-white">查询</button>
+    <el-button @click="addDepartment" type="primary" class="btn-green shadow"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新增角色</el-button>
   </header>
   <article class="mt-30">
     <el-table ref="multipleTable" :data="tableData" v-loading.body="listLoading" fit highlight-current-row>
@@ -47,8 +47,8 @@
         </el-form>
       </div>
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
-        <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="setTimeDialog = false">清空</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false">清 空</el-button>
       </div>
     </div>
   </el-dialog>
@@ -60,7 +60,7 @@
           设置权限：
         </div>
         <div class="fl w90 role-setting-box">
-          <header class="cb p15 fb">
+          <header class="cb p15 fb bb-1">
             <div class="fl w25">
               功能模块
             </div>
@@ -69,7 +69,7 @@
             </div>
           </header>
           <section class="role-setting">
-            <div class="cb">
+            <div class="cb bb-1">
               <div class="fl w25 p15">
                 <el-checkbox>我的首页</el-checkbox>
               </div>
@@ -81,12 +81,12 @@
                 </div>
               </div>
             </div>
-            <div class="cb">
+            <div class="cb bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>造价咨询</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>项目管理</el-checkbox>
                   </div>
@@ -104,7 +104,7 @@
                     <li><el-checkbox>填写报告</el-checkbox></li>
                   </ul>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>单项工程</el-checkbox>
                   </div>
@@ -114,17 +114,17 @@
                     <li><el-checkbox>复核</el-checkbox></li>
                   </ul>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>项目逾期</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>单项逾期</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>造价咨询文件</el-checkbox>
                   </div>
@@ -136,12 +136,12 @@
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-15  bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>全过程管理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>项目管理</el-checkbox>
                   </div>
@@ -152,17 +152,17 @@
                     <li><el-checkbox>分配</el-checkbox></li>
                   </ul>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>单位工程</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>专业工作逾期</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>全过程文件</el-checkbox>
                   </div>
@@ -174,12 +174,12 @@
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-10 bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>招标代理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>采购代理</el-checkbox>
                   </div>
@@ -201,7 +201,7 @@
                     <li><el-checkbox>归档终查</el-checkbox></li>
                   </ul>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>工程代理</el-checkbox>
                   </div>
@@ -221,80 +221,80 @@
                     <li><el-checkbox>归档终查</el-checkbox></li>
                   </ul>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>采购单位维护</el-checkbox>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-10 bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>财务管理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>保证金</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>收费</el-checkbox>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-10 bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>短信管理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>短信发送</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>短信查询</el-checkbox>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-10 bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>权限管理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>部门管理</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>角色管理</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>用户管理</el-checkbox>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="cb mt-10">
+            <div class="cb mt-10 bb-1 pb-15">
               <div class="fl w25 p15">
                 <el-checkbox>系统管理</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>公告管理</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>全过程</el-checkbox>
                   </div>
@@ -306,37 +306,37 @@
                 <el-checkbox>业务监控</el-checkbox>
               </div>
               <div class="fl w75 p15">
-                <div>
+                <div class="bb-1 pb-15">
                   <div>
                     <el-checkbox>单项工程查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>审核单问题查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>采购待开标查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>工程招标查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>工程待开标查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15 bb-1 pb-15">
                   <div>
                     <el-checkbox>采购统计查询</el-checkbox>
                   </div>
                 </div>
-                <div class="mt-30">
+                <div class="mt-15">
                   <div>
                     <el-checkbox>采购产值查询</el-checkbox>
                   </div>
@@ -347,8 +347,8 @@
         </div>
       </div>
       <div slot="footer" class="dialog-footer tc mt-30 mb-20 bt-1 pt-40">
-        <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="setTimeDialog = false">清空</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false">清空</el-button>
       </div>
 
     </div>
@@ -453,12 +453,6 @@ export default {
 #department-content
   .add-department
     padding 10px 25px 10px 0
-  .roles-search
-    padding 7px
-    border 1px solid #ccc
-    border-right none
-    border-top-left-radius 4px
-    border-bottom-left-radius 4px
   .roles-search-btn
     border-top-left-radius 0
     border-bottom-left-radius 0

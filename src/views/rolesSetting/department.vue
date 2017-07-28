@@ -1,7 +1,7 @@
 <template>
 <div id="department-content" class="app-container">
   <header class="p20 bg-color-white shadow radius5 tr">
-    <el-button @click="addDepartment" type="primary" class="btn-green"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新增部门</el-button>
+    <el-button @click="addDepartment" type="primary" class="btn-green shadow"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新增部门</el-button>
   </header>
   <article class="mt-30">
     <el-table ref="multipleTable" :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
@@ -47,8 +47,8 @@
       </div>
 
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
-        <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="setTimeDialog = false">清空</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false">清 空</el-button>
       </div>
     </div>
   </el-dialog>

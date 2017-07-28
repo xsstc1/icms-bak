@@ -1,46 +1,46 @@
 <template>
 <div id="systemSetting-content" class="app-container">
-  <header class="p30 bg-color-white shadow radius5">
+  <header class="p25 bg-color-white shadow radius5">
     <div>
-      <el-row :gutter="10">
-        <el-form :model="formInline" label-width="80px">
-          <el-col :span="6">
-            <div class="grid-content">
-              <el-form-item label="登录名:" class="mt-10 w">
+
+        <el-form :inline="true" :model="formInline" :label-position="right" label-width="80px">
+
+
+              <el-form-item label="登录名:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div class="grid-content">
-              <el-form-item label="用户名称:" class="mt-10 w">
+
+
+
+
+              <el-form-item label="用户名称:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div class="grid-content">
-              <el-form-item label="角色:" class="mt-10 w">
+
+
+
+
+              <el-form-item label="角色:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div class="grid-content">
-              <el-form-item label="状态:" class="mt-10 w">
-                <el-select class="w" size="small" placeholder="请选择">
+
+
+
+
+              <el-form-item label="状态:" class="mt-10">
+                <el-select size="small" placeholder="请选择">
 
                 </el-select>
 
               </el-form-item>
-            </div>
-          </el-col>
+
+
         </el-form>
-      </el-row>
+
     </div>
-    <div class="mt-10 mb-5 tc">
-      <el-button type="primary" class="btn-orange shadow"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查询</el-button>
-      <el-button type="primary" class="btn-red shadow"><i class="iconfont icon-1 f13 mr-5"></i>重置</el-button>
+    <div class="mt-30 mb-5 tc">
+      <el-button type="primary" class="btn-orange shadow mr-50"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查 询</el-button>
+      <el-button type="primary" class="btn-red shadow"><i class="iconfont icon-1 f13 mr-5"></i>重 置</el-button>
       <el-button @click="userCreat" type="primary" class="btn-green shadow"><i class="iconfont icon-iconfont707 f13 mr-5"></i>新增用户</el-button>
     </div>
   </header>
@@ -149,8 +149,8 @@
         </el-row>
       </div>
       <div slot="footer" class="dialog-footer tc mt-25 mb-10">
-        <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="dialogVisible = false">取 消</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="dialogVisible = false">取 消</el-button>
       </div>
     </div>
   </el-dialog>
