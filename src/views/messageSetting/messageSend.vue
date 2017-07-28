@@ -31,12 +31,12 @@
             <div class="mt-15">
               建议短信内容控制在70个字符以内，否则运营商会分割成多条短信发送，当前已输入0字
             </div>
-            <div class="mt-10">
+            <div class="mt-15">
               <el-checkbox v-model="checked">附加发送人信息：朱纪福
                 <15397170760>
               </el-checkbox>
             </div>
-            <div class="mt-10 mb-25">
+            <div class="mt-20 mb-25">
               <el-button type="primary" class="btn-blue"><i class="iconfont icon-svg35 f14 mr-5"></i>发 送</el-button>
               <el-button @click="setTimeSend" type="primary" class="btn-orange"><i class="iconfont icon-dingshifasong f14 mr-5"></i>定时发送</el-button>
             </div>

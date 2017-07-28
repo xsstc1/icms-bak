@@ -190,5 +190,7 @@ export default {
       border-top none
       .ql-editor
         min-height 200px
+  .dropzone .dz-preview .dz-image
+    border-radius 4px
 
 </style>
