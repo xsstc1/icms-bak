@@ -16,7 +16,8 @@
       }
     }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus">
+@import '../../styles/index.styl'; // 全局自定义的css样式
 .app-main
   padding-top 65px
 </style>

@@ -683,9 +683,5 @@ export default {
     padding 8px 25px
   .el-table__fixed-body-wrapper
     padding-top 25px
-  .el-date-editor.el-input,.el-select
-    width 190px
-  .icms-dialog-content
-    .el-date-editor.el-input,.el-select
-      width 100%
+  
 </style>

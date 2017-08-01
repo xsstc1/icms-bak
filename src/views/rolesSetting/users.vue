@@ -1,42 +1,22 @@
 <template>
 <div id="systemSetting-content" class="app-container">
-  <header class="p25 bg-color-white shadow radius5">
+  <header class="p25 bg-color-white shadow radius5 header-search">
     <div>
-
         <el-form :inline="true" :model="formInline" :label-position="right" label-width="80px">
-
-
               <el-form-item label="登录名:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-
-
-
-
               <el-form-item label="用户名称:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-
-
-
-
               <el-form-item label="角色:" class="mt-10">
                 <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
               </el-form-item>
-
-
-
-
               <el-form-item label="状态:" class="mt-10">
                 <el-select size="small" placeholder="请选择">
-
                 </el-select>
-
               </el-form-item>
-
-
         </el-form>
-
     </div>
     <div class="mt-30 mb-5 tc">
       <el-button type="primary" class="btn-orange shadow mr-50"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查 询</el-button>
@@ -48,9 +28,7 @@
     <el-table :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
       <el-table-column align="center" label='序号' width="95" prop="num"></el-table-column>
       <el-table-column label="登录名" width="120">
-
       </el-table-column>
-
       <el-table-column label="用户姓名" width="120" align="center" prop="time"></el-table-column>
       <el-table-column label="部门" align="center" prop="time">
         <template scope="scope">
@@ -68,10 +46,8 @@
           <el-button @click="userStop" type="text" size="small">停用</el-button>
       </template>
       </el-table-column>
-
     </el-table>
   </article>
-
   <footer class="mt-30 cb pagination">
     <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000" class="fr">
     </el-pagination>

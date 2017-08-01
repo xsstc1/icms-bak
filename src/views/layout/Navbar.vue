@@ -66,7 +66,7 @@
   line-height 65px
   border-radius 0px !important
   background-color #324157
-  z-index 99999999
+  z-index 10
   position fixed
   width 100%
 

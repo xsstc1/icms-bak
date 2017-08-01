@@ -13,17 +13,17 @@
       <el-table-column align="center" prop="person" label="操作" width="250">
         <template scope="scope">
         <el-button type="text" size="small">更新文章</el-button>
-          <el-button @click="delArticle" type="text" size="small">删除</el-button>
+          <el-button type="text" size="small">删除</el-button>
       </template>
       </el-table-column>
     </el-table>
   </article>
 
-  <footer class="mt-30 cb pagination">
+  <!-- <footer class="mt-30 cb pagination">
     <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000" class="fr">
     </el-pagination>
     <span class="fr f14 color-8 pagination-text mr-15">当前第1/50页，每页18条，共500条记录</span>
-  </footer>
+  </footer> -->
   <el-dialog :visible.sync="addArticleDialog" size="small" custom-class="icms-dialog">
     <span slot="title">发布文章</span>
     <div class="dialog-box">
@@ -34,7 +34,7 @@
           </el-form-item>
           <el-form-item label="文章内容：">
             <div class="article-edit">
-              <quill-editor v-model="content" :options="editorOption" @blur="onEditorBlur($event)" @focus="onEditorFocus($event)" @ready="onEditorReady($event)"></quill-editor>
+              <quill-editor v-model="content" :options="editorOption"></quill-editor>
             </div>
           </el-form-item>
           <el-form-item label="附件文件：">
@@ -46,8 +46,8 @@
         </el-form>
       </div>
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
-        <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
-        <el-button class="btn-white shadow" @click="setTimeDialog = false">清 空</el-button>
+        <el-button class="btn-orange shadow" type="primary" @click="saveNotice"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false">取消</el-button>
       </div>
     </div>
   </el-dialog>
@@ -58,7 +58,15 @@
 import {
   getList
 } from '@/api/table';
-
+// import Quill from 'quill'
+// import {
+//   ImageImport
+// } from 'quill/modules/ImageImport.js'
+// import {
+//   ImageResize
+// } from 'quill/modules/ImageResize.js'
+// Quill.register('quill/modules/imageImport', ImageImport)
+// Quill.register('quill/modules/imageResize', ImageResize)
 import Dropzone from 'icms-dropzone';
 export default {
   components: {
@@ -66,6 +74,7 @@ export default {
   },
   data() {
     return {
+      content: '',
       addArticleDialog: false,
       roleSettingDialog: false,
       listLoading: true,
@@ -95,6 +104,7 @@ export default {
         person: '郑东'
       }],
       editorOption: {
+        placeholder: '请输入内容',
         modules: {
           toolbar: [
             [{
@@ -120,11 +130,11 @@ export default {
             delay: 1000,
             maxStack: 50,
             userOnly: false
-          },
-          imageImport: true,
-          imageResize: {
-            displaySize: true
           }
+          // imageImport: true,
+          // imageResize: {
+          //   displaySize: true
+          // }
         }
       }
     }
@@ -165,6 +175,9 @@ export default {
     },
     'showSuccess': function(file) {
       console.log('A file was successfully uploaded')
+    },
+    saveNotice() {
+      console.log("富文本内容", this.content)
     }
   }
 };

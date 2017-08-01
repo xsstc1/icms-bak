@@ -44,6 +44,13 @@ const honorEdit = _import('infoSetting/honor');
 const achievementEdit = _import('infoSetting/achievement');
 const cultureEdit = _import('infoSetting/culture');
 
+/* wholeProcess page */
+const projectSetting = _import('wholeProcess/projectSetting');
+const projectFile = _import('wholeProcess/projectFile');
+const wholOverdue = _import('wholeProcess/overdue');
+const wholeIndividual = _import('wholeProcess/individual');
+
+
 Vue.use(Router);
 
 /**
@@ -192,6 +199,32 @@ export const asyncRouterMap = [{
       path: 'userAdmin',
       component: userAdmin,
       name: '用户管理',
+    }]
+  },
+  {
+    path: '/roleSetting',
+    component: Layout,
+    redirect: 'noredirect',
+    name: '全过程管理',
+    icon: 'iconfont icon-bk-flow',
+    children: [{
+      path: 'projectSetting',
+      component: projectSetting,
+      name: '项目管理',
+      icon: 'zonghe'
+    },{
+      path: 'individual',
+      component: wholeIndividual,
+      name: '单位工程',
+      icon: 'zonghe'
+    },{
+      path: 'overdue',
+      component: wholOverdue,
+      name: '专业工作逾期',
+    },{
+      path: 'projectFile',
+      component: projectFile,
+      name: '全过程文件',
     }]
   },
   {
