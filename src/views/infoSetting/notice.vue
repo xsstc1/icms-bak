@@ -58,15 +58,6 @@
 import {
   getList
 } from '@/api/table';
-// import Quill from 'quill'
-// import {
-//   ImageImport
-// } from 'quill/modules/ImageImport.js'
-// import {
-//   ImageResize
-// } from 'quill/modules/ImageResize.js'
-// Quill.register('quill/modules/imageImport', ImageImport)
-// Quill.register('quill/modules/imageResize', ImageResize)
 import Dropzone from 'icms-dropzone';
 export default {
   components: {

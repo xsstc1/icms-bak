@@ -51,12 +51,12 @@
   transition all .5s
   border-radius 50px
 .el-checkbox__input.is-checked .el-checkbox__inner
-  background-color #485b7b
-  border-color #485b7b
+  background-color #32aab7
+  border-color #32aab7
 .el-checkbox__inner:hover
-  border-color #485b7b
+  border-color #32aab7
 .el-checkbox__input.is-focus .el-checkbox__inner,.el-input__inner:focus
-  border-color #485b7b
+  border-color #32aab7
 .el-button--primary:focus, .el-button--primary:hover
   background-color #3e5171
 .el-checkbox__inner
@@ -81,7 +81,7 @@
       font-size 12px
   .icms-dialog-content
     border 1px solid #5a6677
-    padding 40px 20px 20px 20px
+    padding 40px 25px 25px 25px
   nav
     background-color #5a6677
     color #fff
@@ -173,6 +173,8 @@
   border none
   border-radius 5px
   box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)
+  .el-button+.el-button
+    margin-left 3px
   thead
     border-bottom 1px solid #e6e6e6
   td,th.is-leaf
@@ -185,6 +187,9 @@
 .dropzone
   border-radius 4px
   border 1px solid #798da5
+  background-color #f5f5f5
+  &:hover
+    background-color #efefef
   .dz-preview
     .dz-error-message
       top 120px!important
@@ -213,3 +218,28 @@
 .icms-dialog-content
   .el-date-editor.el-input,.el-select
     width 100%
+.el-table::after, .el-table::before
+  display none
+
+.el-button--small,.el-loading-spinner .path,.el-loading-spinner .el-loading-text
+  color #32aab7!important
+  stroke #32aab7!important
+
+.el-breadcrumb
+  line-height 1!important
+  margin-left 25px!important
+  margin-top 30px!important
+  margin-bottom 10px!important
+  font-size 13px!important
+
+.el-date-table td.current:not(.disabled), .el-date-table td.end-date, .el-date-table td.start-date
+  background-color #32aab7!important
+  border-radius 50%
+.el-date-table td.today:before
+  border-top .5em solid #32aab7!important
+.el-date-table td
+  border-radius 50%
+.el-date-table td.today
+  color #32aab7
+.el-select .el-input__inner:focus
+  border-color #32aab7

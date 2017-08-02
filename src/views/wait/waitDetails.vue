@@ -1,6 +1,6 @@
 <template>
 <div id="wait-details" class="app-container">
-  <header class="p25 bg-color-white pr shadow radius5">
+  <header class="p25 bg-color-white pr shadow radius5 header-search">
     <el-form :inline="true" :model="formInline" class="demo-form-inline" :label-position="right" label-width="90px">
       <el-form-item label="项目名称:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写项目名称"></el-input>
@@ -16,8 +16,7 @@
       </el-form-item>
       <br>
       <el-form-item label="归档日期:">
-        <el-date-picker size="small" type="date" placeholder="选择日期">
-        </el-date-picker>
+        <el-date-picker class="w" size="small" type="date" placeholder="选择日期"></el-date-picker>
       </el-form-item>
       <el-form-item label="归档编号:">
         <el-input size="small" v-model="formInline.user" placeholder="请填写归档编号"></el-input>
@@ -683,5 +682,5 @@ export default {
     padding 8px 25px
   .el-table__fixed-body-wrapper
     padding-top 25px
-  
+
 </style>

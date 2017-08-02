@@ -1,50 +1,49 @@
 <template>
-<div id="systemSetting-content" class="app-container">
+<div id="projectSetting-content" class="app-container">
   <header class="p25 bg-color-white shadow radius5 header-search">
     <div>
-        <el-form :inline="true" :model="formInline" :label-position="right" label-width="110px">
-              <el-form-item label="项目名称:" class="mt-10">
-                <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
-              </el-form-item>
-              <el-form-item label="项目经理:" class="mt-10">
-                <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
-              </el-form-item>
-              <el-form-item label="委托单位名称:" class="mt-10">
-                <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
-              </el-form-item>
-              <el-form-item label="流程状态:" class="mt-10">
-                <el-select size="small" placeholder="请选择">
-                </el-select>
-              </el-form-item>
-        </el-form>
+      <el-form :inline="true" :model="formInline" :label-position="right" label-width="90px">
+        <el-form-item label="工作类型:" class="mt-10">
+          <el-input class="w" size="small" v-model="formInline.user" placeholder=""></el-input>
+        </el-form-item>
+        <el-form-item label="上报时间:" class="mt-10">
+          <el-date-picker class="w" type="date" placeholder="选择日期"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="流程状态:" class="mt-10">
+          <el-select size="small" placeholder="请选择">
+          </el-select>
+        </el-form-item>
+      </el-form>
     </div>
     <div class="mt-30 mb-5 tc">
-      <el-button type="primary" class="btn-orange shadow mr-50"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查 询</el-button>
-
-      <el-button @click="creatNew = true" type="primary" class="btn-red shadow"><i class="iconfont icon-iconfont707 f13 mr-5"></i>新增项目</el-button>
+      <el-button type="primary" class="btn-orange shadow"><i class="iconfont icon-shiliangzhinengduixiang f13 mr-5"></i>查 询</el-button>
       <el-button class="btn-green shadow" type="primary"><i class="iconfont icon-excel f12 mr-5"></i>导出Excel</el-button>
     </div>
   </header>
   <article class="mt-30">
     <el-table :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
       <el-table-column align="center" label='序号' width="95" prop="num"></el-table-column>
-      <el-table-column label="登录名" width="120">
+      <el-table-column label="工作类型" width="120">
       </el-table-column>
-      <el-table-column label="用户姓名" width="120" align="center" prop="time"></el-table-column>
-      <el-table-column label="部门" align="center" prop="time">
+      <el-table-column label="合同编号" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="合同名称" align="center" prop="time">
         <template scope="scope">
             <router-link class='inlineBlock' to="/waitDetails">
             {{scope.row.waitThing}}
             </router-link>
         </template>
       </el-table-column>
-      <el-table-column label="角色" width="120" align="center" prop="time"></el-table-column>
-      <el-table-column label="创建日期" width="120" align="center" prop="time"></el-table-column>
-      <el-table-column align="center" prop="person" label="发送状态" width="80"></el-table-column>
-      <el-table-column align="center" label="发送状态" width="200">
+      <el-table-column label="合同金额" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="承包人" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column label="上报日期" width="120" align="center" prop="time"></el-table-column>
+      <el-table-column align="center" prop="person" label="流程状态" width="80"></el-table-column>
+      <el-table-column align="center" label="操作" width="300">
         <template scope="scope">
-        <el-button type="text" size="small">编辑</el-button>
-          <el-button @click="userStop" type="text" size="small">停用</el-button>
+        <el-button type="text" size="small">查看</el-button>
+        <el-button type="text" size="small">工程进度</el-button>
+        <el-button type="text" size="small">修改</el-button>
+        <el-button type="text" size="small">删除</el-button>
+        <el-button type="text" size="small">提交</el-button>
       </template>
       </el-table-column>
     </el-table>
@@ -209,20 +208,22 @@
         <nav class="pa">
           工作要求附件
         </nav>
-        <el-upload class="upload-demo" action="https://jsonplaceholder.typicode.com/posts/" :on-preview="handlePreview" :on-remove="handleRemove" :file-list="fileList">
-          <el-button class="wait-details-upload" size="small" type="primary"><i class="iconfont icon-tianjiawenjianjia mr-5 f15"></i>开始添加文件</el-button>
-          <div slot="tip" class="el-upload__tip">支持文件类型(*.doc;*.docx;*.xls;*.xlsx;*.ppt;*.pptx;*.zip;*.rar;*.epjs;*.emjs;*.emjsx;*.epjsx;*.pdf)</div>
-        </el-upload>
-        <el-table class="tc mt-20" :data="workFile" style="width: 100%" fit highlight-current-row>
+        <el-table class="tc mb-30 bbs-1" :data="workFile" style="width: 100%" fit highlight-current-row>
           <el-table-column prop="num" label="编号" width="50"></el-table-column>
           <el-table-column prop="fileName" label="文件名称"></el-table-column>
           <el-table-column prop="time" label="上传时间" width="150"></el-table-column>
           <el-table-column prop="person" label="上传人" width="120"></el-table-column>
         </el-table>
+        <div class="bts-1 pt-15">
+          <dropzone id="myVueDropzone" url="https://httpbin.org/post" v-on:vdropzone-success="showSuccess">
+            <!-- Optional parameters if any! -->
+            <input type="hidden" name="token" value="xxx">
+          </dropzone>
+        </div>
       </div>
       <div slot="footer" class="dialog-footer tc mt-35">
         <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
-        <el-button class="btn-white shadow" @click="dialogVisible = false">取 消</el-button>
+        <el-button class="btn-white shadow" @click="creatNew = false">取 消</el-button>
       </div>
     </div>
   </el-dialog>
@@ -233,8 +234,11 @@
 import {
   getList
 } from '@/api/table';
-
+import Dropzone from 'icms-dropzone';
 export default {
+  components: {
+    Dropzone
+  },
   data() {
     return {
       formInline: {
@@ -245,22 +249,22 @@ export default {
       listLoading: true,
       tableData: [{
         num: 1,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '戴利华',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 2,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '戴利华',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 3,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '戴利华',
         time: '2017-05-08',
         person: '郑东'
       }, {
         num: 4,
-        waitThing: '待归档：苏州苏绣小镇项目小镇客厅单体及景观设计',
+        waitThing: '戴利华',
         time: '2017-05-08',
         person: '郑东'
       }]
@@ -297,7 +301,11 @@ export default {
 </script>
 
 <style lang="stylus">
-#systemSetting-content
+#projectSetting-content
   .el-form--inline .el-form-item
     margin-bottom 0
+  .dropzone
+    border none
+  .el-table
+    box-shadow none
 </style>

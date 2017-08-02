@@ -45,7 +45,10 @@ const achievementEdit = _import('infoSetting/achievement');
 const cultureEdit = _import('infoSetting/culture');
 
 /* wholeProcess page */
-const projectSetting = _import('wholeProcess/projectSetting');
+const projectSetting = _import('wholeProcess/projectSetting/index');
+//projectSetting folder
+const projectWork = _import('wholeProcess/projectSetting/projectWork');
+//projectSetting folder
 const projectFile = _import('wholeProcess/projectFile');
 const wholOverdue = _import('wholeProcess/overdue');
 const wholeIndividual = _import('wholeProcess/individual');
@@ -74,7 +77,7 @@ export const constantRouterMap = [{
     path: '/',
     component: Layout,
     redirect: '/home',
-    name: 'Home',
+    name: '首页',
     hidden: true,
     children: [{
       path: 'home',
@@ -103,16 +106,6 @@ export const asyncRouterMap = [{
       name: '平台首页'
     }]
   },
-
-  // const noticeEdit = _import('infoSetting/notice');
-  // const forumEdit = _import('infoSetting/forum');
-  // const statuteEdit = _import('infoSetting/statute');
-  // const insideEdit = _import('infoSetting/inside');
-  // const priceEdit = _import('infoSetting/price');
-  // const honorEdit = _import('infoSetting/honor');
-  // const achievementEdit = _import('infoSetting/achievement');
-  // const cultureEdit = _import('infoSetting/culture');
-
   {
     path: '/infoSetting',
     component: Layout,
@@ -124,37 +117,37 @@ export const asyncRouterMap = [{
       component: noticeEdit,
       name: '公告栏',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'forumEdit',
       component: forumEdit,
       name: '论坛',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'statuteEdit',
       component: statuteEdit,
       name: '法规制度',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'insideEdit',
       component: insideEdit,
       name: '内部材料',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'priceEdit',
       component: priceEdit,
       name: '材料价格',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'honorEdit',
       component: honorEdit,
       name: '材料价格',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'achievementEdit',
       component: achievementEdit,
       name: '企业经营与业绩',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'cultureEdit',
       component: cultureEdit,
       name: '企业文化',
@@ -172,7 +165,7 @@ export const asyncRouterMap = [{
       component: messageSend,
       name: '短信发送',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'messageQuery',
       component: messageQuery,
       name: '短信查询',
@@ -190,42 +183,50 @@ export const asyncRouterMap = [{
       component: departmentAdmin,
       name: '部门管理',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'roleAdmin',
       component: roleAdmin,
       name: '角色管理',
       icon: 'zonghe'
-    },{
+    }, {
       path: 'userAdmin',
       component: userAdmin,
       name: '用户管理',
     }]
   },
   {
-    path: '/roleSetting',
+    path: '/wholeSetting',
     component: Layout,
     redirect: 'noredirect',
     name: '全过程管理',
     icon: 'iconfont icon-bk-flow',
     children: [{
-      path: 'projectSetting',
-      component: projectSetting,
-      name: '项目管理',
-      icon: 'zonghe'
-    },{
-      path: 'individual',
-      component: wholeIndividual,
-      name: '单位工程',
-      icon: 'zonghe'
-    },{
-      path: 'overdue',
-      component: wholOverdue,
-      name: '专业工作逾期',
-    },{
-      path: 'projectFile',
-      component: projectFile,
-      name: '全过程文件',
-    }]
+        path: 'projectSetting',
+        component: projectSetting,
+        name: '项目管理',
+        icon: 'zonghe'
+      },
+      {
+        path: 'projectWork',
+        component: projectWork,
+        name: '项目工作',
+        hidden: true,
+        icon: 'zonghe'
+      }, {
+        path: 'individual',
+        component: wholeIndividual,
+        name: '单位工程',
+        icon: 'zonghe'
+      }, {
+        path: 'overdue',
+        component: wholOverdue,
+        name: '专业工作逾期',
+      }, {
+        path: 'projectFile',
+        component: projectFile,
+        name: '全过程文件',
+      }
+    ]
   },
   {
     path: '/systemSetting',
@@ -234,11 +235,11 @@ export const asyncRouterMap = [{
     name: '系统管理',
     icon: 'iconfont icon-shezhitianchong',
     noDropdown: true,
-    hidden:true,
+    hidden: true,
     children: [{
       path: 'index',
       component: systemSetting,
-      name:"系统管理"
+      name: "系统管理"
     }]
   },
   {

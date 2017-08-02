@@ -1,7 +1,6 @@
 <template>
     <el-menu class="navbar" mode="horizontal">
         <hamburger class="hamburger-container color-hui" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
-        <!-- <levelbar></levelbar> -->
         <!-- <el-dropdown class="avatar-container" trigger="click">
             <div class="avatar-wrapper">
                 <img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">
@@ -33,12 +32,11 @@
 
 <script>
     import { mapGetters } from 'vuex';
-    import Levelbar from './Levelbar';
+
     import Hamburger from '@/components/Hamburger';
 
     export default {
       components: {
-        Levelbar,
         Hamburger
       },
       computed: {
