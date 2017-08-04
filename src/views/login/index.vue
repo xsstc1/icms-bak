@@ -122,6 +122,8 @@
       color #ccc
     input
       text-indent 25px
+      border-radius 50px
+      height 35px
   .login-logo
     border 10px solid #fff
     padding 13px

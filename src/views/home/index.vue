@@ -1,5 +1,5 @@
 <template>
-<div class="home-container p25">
+<div class="home-container p20">
   <!-- <div class='dashboard-text'>name:{{name}}</div>
     <div class='dashboard-text'>role:<span v-for='role in roles' :key='role'>{{role}}</span></div> -->
   <header class="cb">

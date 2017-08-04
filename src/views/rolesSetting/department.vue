@@ -4,7 +4,7 @@
     <el-button @click="addDepartment" type="primary" class="btn-green shadow"><i class="iconfont icon-iconfont707 f12 mr-5"></i>新增部门</el-button>
   </header>
   <article class="mt-30">
-    <el-table ref="multipleTable" :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
+    <el-table ref="multipleTable" :data="tableData" v-loading.body="listLoading" fit highlight-current-row>
       <el-table-column type="selection" align="center" label='序号' width="95" prop="num"></el-table-column>
       <el-table-column label="部门名称" width="120">
 

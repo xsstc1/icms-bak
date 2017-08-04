@@ -81,6 +81,7 @@ export const constantRouterMap = [{
     hidden: true,
     children: [{
       path: 'home',
+      name:'首页',
       component: home
     }]
   }
@@ -263,6 +264,7 @@ export const asyncRouterMap = [{
     path: '/waitList', //代办页
     component: Layout,
     redirect: '/wait/index',
+    name:"代办列表",
     hidden: true,
     children: [{
       path: '',
@@ -273,6 +275,7 @@ export const asyncRouterMap = [{
     path: '/waitDetails', //代办详情
     component: Layout,
     redirect: '/wait/waitDetails',
+    name:"代办详情",
     hidden: true,
     children: [{
       path: '',

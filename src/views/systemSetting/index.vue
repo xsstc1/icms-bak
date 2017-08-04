@@ -28,7 +28,7 @@
     </el-row>
   </header>
   <article class="mt-30">
-    <el-table :data="tableData" v-loading.body="listLoading" element-loading-text="拼命加载中" fit highlight-current-row>
+    <el-table :data="tableData" v-loading.body="listLoading" fit highlight-current-row>
       <el-table-column align="center" label='序号' width="95" prop="num"></el-table-column>
       <el-table-column label="标题">
         <template scope="scope">
