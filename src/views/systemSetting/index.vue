@@ -99,7 +99,7 @@
       </div>
       <div slot="footer" class="dialog-footer tc mt-35">
         <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="dialogVisible = false">取 消</el-button>
+        <el-button class="btn-white" @click="dialogVisible = false"><i class="iconfont icon-quxiao1 f14 mr-5"></i>取 消</el-button>
   </div>
     </div>
   </el-dialog>

@@ -48,7 +48,7 @@
       </div>
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
         <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
-        <el-button class="btn-white shadow" @click="setTimeDialog = false">清 空</el-button>
+        <el-button class="btn-white shadow" @click="dialogVisible = false"><i class="iconfont icon-quxiao1 f14 mr-5"></i>取 消</el-button>
       </div>
     </div>
   </el-dialog>
@@ -348,7 +348,7 @@
       </div>
       <div slot="footer" class="dialog-footer tc mt-30 mb-20 bt-1 pt-40">
         <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-save f14 mr-5"></i>保 存</el-button>
-        <el-button class="btn-white shadow" @click="setTimeDialog = false">清空</el-button>
+        <el-button class="btn-white shadow" @click="dialogVisible = false"><i class="iconfont icon-quxiao1 f14 mr-5"></i>取 消</el-button>
       </div>
 
     </div>

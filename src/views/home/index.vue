@@ -379,28 +379,28 @@
               </el-col>
               <el-col :span="12" :xs="24" class="mt-25">
                 <div class="grid-content tc">
-                <span class="text-short">工程造价咨询档案立卷规则</span>
-              </div>
+                  <span class="text-short">工程造价咨询档案立卷规则</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-25">
                 <div class="grid-content tc">
-                <span class="text-short">工程造价咨询档案立卷规则</span>
-              </div>
+                  <span class="text-short">工程造价咨询档案立卷规则</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-25">
                 <div class="grid-content tc">
-                <span class="text-short">工程造价咨询档案立卷规则</span>
-              </div>
+                  <span class="text-short">工程造价咨询档案立卷规则</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-25">
                 <div class="grid-content tc">
-                <span class="text-short">工程造价咨询档案立卷规则</span>
-              </div>
+                  <span class="text-short">工程造价咨询档案立卷规则</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-25">
                 <div class="grid-content tc">
-                <span class="text-short">工程造价咨询档案立卷规则</span>
-              </div>
+                  <span class="text-short">工程造价咨询档案立卷规则</span>
+                </div>
               </el-col>
             </el-row>
           </section>
@@ -518,18 +518,18 @@
               </el-col>
               <el-col :span="12" :xs="24" class="mt-35">
                 <div class="grid-content tc">
-                <span class="text-short home-company-achievement">企业经营业绩</span>
-              </div>
+                  <span class="text-short home-company-achievement">企业经营业绩</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-35">
                 <div class="grid-content tc">
-                <span class="text-short home-company-culture">企业文化</span>
-              </div>
+                  <span class="text-short home-company-culture">企业文化</span>
+                </div>
               </el-col>
               <el-col :span="12" :xs="24" class="mt-35">
                 <div class="grid-content tc">
-                <span class="text-short home-company-forum">论坛</span>
-              </div>
+                  <span class="text-short home-company-forum">论坛</span>
+                </div>
               </el-col>
             </el-row>
           </section>
@@ -541,16 +541,21 @@
 </template>
 
 <script>
-import {
-  mapGetters
-} from 'vuex';
+import fetch from '@/utils/fetch';
 export default {
   name: 'home',
-  computed: {
-    ...mapGetters([
-      'name',
-      'roles'
-    ])
+  created() {
+    this.getTest().then(response => {
+      console.log("response", response)
+    })
+  },
+  methods: {
+    getTest() {
+      return fetch({
+        url: '/test/test',
+        method: 'get'
+      });
+    }
   }
 }
 </script>

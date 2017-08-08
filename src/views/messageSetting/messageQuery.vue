@@ -1,7 +1,7 @@
 <template>
 <div id="systemSetting-content" class="app-container">
   <header class="p20 bg-color-white shadow radius5">
-      <div>
+      <div class="mt-5">
         <el-form :inline="true" :model="formInline" class="demo-form-inline" :label-position="right" label-width="90px">
           <el-form-item label="发送人:" class="mt-10">
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
@@ -16,10 +16,7 @@
             <el-input size="small" v-model="formInline.user" placeholder=""></el-input>
           </el-form-item>
           <el-form-item label="发送状态:" class="mt-10">
-            <el-select size="small" placeholder="请选择">
-
-            </el-select>
-
+            <el-select size="small" placeholder="请选择"></el-select>
           </el-form-item>
         </el-form>
       </div>
@@ -99,7 +96,7 @@
       </div>
       <div slot="footer" class="dialog-footer tc mt-35">
         <el-button class="btn-orange" type="primary" @click="dialogVisible = false">保存</el-button>
-        <el-button class="btn-white" @click="dialogVisible = false">取 消</el-button>
+        <el-button class="btn-white" @click="dialogVisible = false"><i class="iconfont icon-quxiao1 f14 mr-5"></i>取 消</el-button>
   </div>
     </div>
   </el-dialog>
@@ -149,7 +146,7 @@ export default {
   methods: {
     fetchData() {
       this.listLoading = true;
-      getList(this.listQuery).then(response => {
+      getList().then(response => {
         this.list = response.data.items;
         this.listLoading = false;
       })

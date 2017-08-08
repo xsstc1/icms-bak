@@ -37,8 +37,8 @@
               </el-checkbox>
             </div>
             <div class="mt-20 mb-25">
-              <el-button type="primary" class="btn-blue"><i class="iconfont icon-svg35 f14 mr-5"></i>发 送</el-button>
-              <el-button @click="setTimeSend" type="primary" class="btn-orange"><i class="iconfont icon-dingshifasong f14 mr-5"></i>定时发送</el-button>
+              <el-button type="primary" class="btn-blue shadow"><i class="iconfont icon-svg35 f14 mr-5"></i>发 送</el-button>
+              <el-button @click="setTimeSend" type="primary" class="btn-orange shadow"><i class="iconfont icon-dingshifasong f14 mr-5"></i>定时发送</el-button>
             </div>
           </el-col>
         </el-row>
@@ -70,7 +70,7 @@
       </div>
       <div slot="footer" class="dialog-footer tc mt-10 mb-20">
         <el-button class="btn-orange shadow" type="primary" @click="dialogVisible = false"><i class="iconfont icon-svg35 f13 mr-5"></i>发 送</el-button>
-        <el-button class="btn-white shadow" @click="setTimeDialog = false">取 消</el-button>
+        <el-button class="btn-white shadow" @click="setTimeDialog = false"><i class="iconfont icon-quxiao1 f14 mr-5"></i>取 消</el-button>
       </div>
     </div>
   </el-dialog>

@@ -229,7 +229,6 @@
   line-height 1!important
   margin-left 35px!important
   margin-top 35px!important
-  margin-bottom 5px!important
   font-size 13px!important
 
 .el-date-table td.current:not(.disabled), .el-date-table td.end-date, .el-date-table td.start-date
@@ -239,7 +238,7 @@
   border-top .5em solid #32aab7!important
 .el-date-table td
   border-radius 50%
-.el-date-table td.today,.el-button--text:focus, .el-button--text:hover,.el-select-dropdown.is-multiple .el-select-dropdown__item.selected
+.el-date-table td.today,.el-button--text:focus, .el-button--text:hover,.el-select-dropdown.is-multiple .el-select-dropdown__item.selected,.el-time-panel__btn.confirm,.el-picker-panel__link-btn
   color #32aab7
 .el-select .el-input__inner:focus,.el-textarea__inner:focus
   border-color #32aab7
@@ -247,3 +246,10 @@
   background-color rgba(50, 170, 183, 0.2)
   border-color rgba(32,160,255,.2)
   color #32aab7
+  .el-tag__close:hover
+    background-color #32aab7
+.el-date-picker.has-time
+  width 260px!important
+  min-width 260px!important
+.el-time-panel__content::after, .el-time-panel__content::before
+    background-color #32aab7
