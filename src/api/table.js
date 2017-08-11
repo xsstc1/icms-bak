@@ -2,10 +2,8 @@ import fetch from '@/utils/fetch';
 
 export function getList(params) {
   return fetch({
-    url: '/table/list',
+    url: '/home/index?rows=6',
     method: 'get',
     params
   });
 }
-
-

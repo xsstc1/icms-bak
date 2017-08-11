@@ -28,20 +28,21 @@ router.beforeEach((to, from, next) => {
       next({ path: '/' });
     } else {
       if (store.getters.roles.length === 0) {
-        store.dispatch('GetInfo').then(res => {
-          const roles = res.data.role;
-          store.dispatch('GenerateRoutes', { roles }).then(() => {
-            router.addRoutes(store.getters.addRouters);
-            next({ ...to });
-          })
-        })
+        // store.dispatch('GetInfo').then(res => {
+        //   const roles = res.data.role;
+        //   store.dispatch('GenerateRoutes', { roles }).then(() => {
+        //     router.addRoutes(store.getters.addRouters);
+        //     next({ ...to });
+        //   })
+        // })
       } else {
         next();
       }
     }
   } else {
+
     if (whiteList.indexOf(to.path) !== -1) {
-      next()
+      next();
     } else {
       next('/login');
       NProgress.done();

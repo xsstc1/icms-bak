@@ -34,11 +34,11 @@
 
 
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active,.el-menu-item.is-active
-  color #fff
-  background-color #32aab7
+  color #fff!important
+  background-color #32aab7!important
 .el-menu--dark .el-menu-item:hover, .el-menu--dark .el-submenu__title:hover
-  background-color #37c3d2
-  color #fff
+  background-color #37c3d2!important
+  color #fff!important
 
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active,.el-menu-item.is-active:before
   content ""
@@ -48,7 +48,7 @@
   position absolute
   left 0
 .el-button
-  transition all .5s
+  transition all .5s!important
   border-radius 50px
 .el-checkbox__input.is-checked .el-checkbox__inner
   background-color #32aab7
@@ -67,9 +67,9 @@
   border 1px solid #324157
 
 .el-table__footer-wrapper thead div, .el-table__header-wrapper thead div,.el-table th,.el-table__fixed-header-wrapper thead div
-  background-color #fff
+  background-color #fff!important
 .el-table__body tr.current-row>td,.el-table--enable-row-hover .el-table__body tr:hover>td
-  background-color #f1f1f1
+  background-color #f1f1f1!important
 .icms-dialog
   .el-dialog__header
     background-color #5a6677
@@ -101,39 +101,39 @@
 .el-table th>.cell
   padding 5px 5px 15px 5px
 .btn-orange
-  background-color #ff885a
-  border 1px solid #ff885a
-  padding 9px 20px
+  background-color #ff885a!important
+  border 1px solid #ff885a!important
+  padding 9px 20px!important
   &:hover,&:focus
     opacity 0.7
-    background-color #ff885a
-    border 1px solid #ff885a
+    background-color #ff885a!important
+    border 1px solid #ff885a!important
 .btn-red
-  background-color #ff7373
-  border 1px solid #ff7373
-  padding 9px 20px
+  background-color #ff7373!important
+  border 1px solid #ff7373!important
+  padding 9px 20px!important
   &:hover,&:focus
     opacity 0.7
-    background-color #ff7373
-    border 1px solid #ff7373
+    background-color #ff7373!important
+    border 1px solid #ff7373!important
 .btn-blue
-  background-color #32aab7
-  border 1px solid #32aab7
-  padding 9px 20px
+  background-color #32aab7!important
+  border 1px solid #32aab7!important
+  padding 9px 20px!important
   &:hover,&:focus
     opacity 0.7
-    background-color #32aab7
-    border 1px solid #32aab7
+    background-color #32aab7!important
+    border 1px solid #32aab7!important
 .btn-green
-  background-color #1acab1
-  border 1px solid #1acab1
-  padding 9px 20px
+  background-color #1acab1!important
+  border 1px solid #1acab1!important
+  padding 9px 20px!important
   &:hover,&:focus
     opacity 0.7
-    background-color #1acab1
-    border 1px solid #1acab1
+    background-color #1acab1!important
+    border 1px solid #1acab1!important
 .btn-white
-  padding 10px 20px
+  padding 10px 20px!important
   &:hover,&:focus
     opacity 0.7
 .el-checkbox__input.is-indeterminate .el-checkbox__inner
@@ -167,18 +167,18 @@
 .el-input--mini .el-input__inner
   height 30px
 .el-table .cell, .el-table th>div
-  padding 10px 5px
+  padding 10px 5px!important
 .el-table
-  padding 15px 0
-  border none
-  border-radius 5px
-  box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)
+  padding 15px 0!important
+  border none!important
+  border-radius 5px!important
+  box-shadow 0px 1px 3px rgba(0, 0, 0, 0.12)!important
   .el-button+.el-button
     margin-left 3px
   thead
-    border-bottom 1px solid #e6e6e6
+    border-bottom 1px solid #e6e6e6!important
   td,th.is-leaf
-    border-bottom none
+    border-bottom none!important
   .el-table__body-wrapper
     padding-top 10px
 .el-picker-panel
@@ -230,7 +230,6 @@
   margin-left 35px!important
   margin-top 35px!important
   font-size 13px!important
-
 .el-date-table td.current:not(.disabled), .el-date-table td.end-date, .el-date-table td.start-date
   background-color #32aab7!important
   border-radius 50%
@@ -253,3 +252,5 @@
   min-width 260px!important
 .el-time-panel__content::after, .el-time-panel__content::before
     background-color #32aab7
+.el-loading-mask
+  z-index 9

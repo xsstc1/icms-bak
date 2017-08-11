@@ -28,8 +28,9 @@ const user = {
     // 登录
     Login({ commit }, userInfo) {
       const email = userInfo.email.trim();
+      const company = "SZ";
       return new Promise((resolve, reject) => {
-        login(email, userInfo.password).then(response => {
+        login(company,email, userInfo.password).then(response => {
           const data = response.data;
           Cookies.set('Admin-Token', data.token);
           commit('SET_TOKEN', data.token);

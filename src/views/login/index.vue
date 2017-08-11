@@ -140,9 +140,9 @@
     bottom 0
     padding 20px
     position fixed
+    z-index 999
   .el-form-item__error
     padding-top 7px
-
 @media screen and (max-width: 768px)
   .login-container
     .login-form
@@ -153,6 +153,4 @@
         margin-bottom 40px
     .login-bg
       height 70px
-
-
 </style>
